@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in</title>
+    <link rel="stylesheet" type="text/css" href="mystylesheet.css" />
+    <script type="text/javascript" src="Name.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+    <nav>
+        <img id="logo" src="Logo2.png" />
+
+        <ul>
+            <li><a href="Home.html" target="_blank"> Home </a></li>
+
+            <li><a href="CONTACT.html" target="_blank"> Inquire </a></li>
+
+            <li><a href="DemonSlayer.html" target="_blank"> Products</a></li>
+            <li><a href="Aboutus.html" target="_blank">Aboutus</a> </li>
+            <li><a href="Orders.html" target="_blank">FAQ</a> </li>
+            <li><a href="Team.html" target="_blank">Team</a> </li>
+            <li><a href="SIGNIN.html" target="_blank"> Signin </a> </li>
+        </ul>
+
+    </nav>
+
+    <br />
+    <br />
+    <h1 id="hei">
+        CREATE YOUR NEW ACCOUNT
+    </h1>
+    <br />
+    <div>
+        <div>
+
+        </div>
+        <div class="op">
+            <form name="myform">
+                <label for="fname"> First Name : </label> &nbsp
+                <input type="text" id="fname" name="fname" placeholder="Your First name..." />
+                <br>
+                <label for="lname"> Last Name : </label> &nbsp
+                <input type="text" id="lname" name="lname" placeholder="Your Last name..." />
+                <br>
+                <br />
+                <label for="email"> Email :</label> &nbsp &nbsp &nbsp &nbsp &nbsp
+                <input type="email" id="email" name="email" />
+
+                <br>
+                <br />
+                <label>Gender :</label>
+                Male:<input type="radio" name="Gender" value="Male" />
+                Female:<input type="radio" name="Gender" value="Female" />
+                <br />
+                <br />
+                <label for="password"> Password :</label> &nbsp &nbsp
+                <input type="password" id="password" name="p1" />
+                <input id="check" type="checkbox" name="check" onclick="toggle()" /> Show password
+                <br />
+                <br />
+                <label for="c-password"> Confirm Password :</label> &nbsp &nbsp
+                <input type="password" id="c-password" name="p2" />
+
+                <br />
+                <br />
+
+                <br />
+                <label for="submit"></label>
+                <input id="submit" type="button" value="Submit" onclick="sub()" />
+            </form>
+        </div>
+    </div>
+    <script>
+        function toggle() {
+            var pass = document.getElementById("password");
+            if (pass.type == "password") {
+                pass.type = "text";
+            } else {
+                pass.type = "password";
+            }
+        }
+
+        function sub() {
+            var pass1 = document.myform.p1.value;
+            var pass2 = document.myform.p2.value;
+            if (pass1 != pass2) {
+                alert("Passwords do not match!")
+            } else {
+                var a = document.getElementById("fname").value;
+                var b = document.getElementById("lname").value;
+
+                alert("hello " + a + " " + b);
+            }
+        }
+
+    </script>
+    <br />
+    <br />
+
+</body>
+</html>
